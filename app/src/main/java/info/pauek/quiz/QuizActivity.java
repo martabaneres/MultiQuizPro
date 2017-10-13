@@ -1,6 +1,7 @@
 package info.pauek.quiz;
 
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
+
+import static android.support.v7.app.AlertDialog.*;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -80,8 +83,9 @@ public class QuizActivity extends AppCompatActivity {
                 String.format("Correctas: %d\nIncorrectas: %d\nNo Contestadas: %d\n",
                         correctas, incorrectas, nocontestadas);
 
-        Toast.makeText(QuizActivity.this, resultado, Toast.LENGTH_LONG).show();
-        finish();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+
     }
 
     private void checkAnswer() {
