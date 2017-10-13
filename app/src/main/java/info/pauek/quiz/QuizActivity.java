@@ -1,5 +1,6 @@
 package info.pauek.quiz;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -79,11 +80,20 @@ public class QuizActivity extends AppCompatActivity {
             else if (answer[i] == -1) nocontestadas++;
             else incorrectas++;
         }
-        String resultado =
+        String message =
                 String.format("Correctas: %d\nIncorrectas: %d\nNo Contestadas: %d\n",
                         correctas, incorrectas, nocontestadas);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.results);
+        builder.setMessage(message);
+        builder.setPositiveButton(R.string.finish, new OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+
 
 
     }
