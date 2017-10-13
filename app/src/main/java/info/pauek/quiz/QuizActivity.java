@@ -40,13 +40,7 @@ public class QuizActivity extends AppCompatActivity {
         btn_prev = (Button) findViewById(R.id.btn_prev);
 
         all_questions = getResources().getStringArray(R.array.all_questions);
-        answer_is_correct = new boolean[all_questions.length];
-        answer = new int[all_questions.length];
-        for (int i = 0; i < answer.length; i++) {
-            answer[i] = -1;
-        }
-        current_question = 0;
-        showQuestion();
+        startOver();
 
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +67,16 @@ public class QuizActivity extends AppCompatActivity {
         });
     }
 
+    private void startOver() {
+        answer_is_correct = new boolean[all_questions.length];
+        answer = new int[all_questions.length];
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = -1;
+        }
+        current_question = 0;
+        showQuestion();
+    }
+
     private void checkResults() {
         int correctas = 0, incorrectas = 0, nocontestadas = 0;
         for (int i = 0; i < all_questions.length; i++) {
@@ -87,15 +91,20 @@ public class QuizActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.results);
         builder.setMessage(message);
+        builder.setCancelable(false);
         builder.setPositiveButton(R.string.finish, new OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 finish();
             }
         });
-
-
-
+        builder.setNegativeButton(R.string.start_over, new OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                startOver();
+            }
+        });
+        builder.create().show();
     }
 
     private void checkAnswer() {
