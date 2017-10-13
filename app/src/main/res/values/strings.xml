@@ -11,9 +11,15 @@
     <string name="start_over">Start Over</string>
 
     <array name="all_questions">
-        <item>What is the capital of Bhutan?;Ouagadougou;Phnom Penh;*Thimphu;Zgighiti</item>
-        <item>Pregunta 2;a;*b;c;d</item>
-        <item>XXXXXXXX;isjis;*jdhdh;123;....</item>
+        <item>Which one of these guitarists is considered the inventor of Heavy Metal music?;
+            Jimmy Page (Led Zeppelin);Ritchie Blackmore (Deep Purple);*Tony Iommi (Black Sabbath);
+            Pete Townshend (The Who)</item>
+        <item>Which one of these drummers has made explode his drums during a concert?;
+            Nick Mason (Pink Floyd);*Keith Moon (The Who);Roger Taylor (Queen);
+            Dave Grohl (Nirvana)</item>
+        <item>Which one of these songs is considered the first in the history of Rock and Roll?;*Maybelline (Chuck Berry);
+            That is Alright Mama (Elvis Presley);
+            Rock Around The Clock (Bill Haley);Bo Didley (Bo Didley)</item>
     </array>
 
 </resources>

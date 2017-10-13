@@ -9,4 +9,16 @@
     <string name="prev">Anterior</string>
     <string name="results">Resultados</string>
     <string name="start_over">Volver a empezar</string>
+
+    <array name="all_questions">
+        <item>¿Cuál de estos guitarristas es considerado el inventor del Heavy Metal?;
+            Jimmy Page (Led Zeppelin);Ritchie Blackmore (Deep Purple);
+            *Tony Iommi (Black Sabbath);Pete Townshend (The Who)</item>
+        <item>¿Cuál de estos bateristas ha hecho estallar sus tambores durante un concierto?;
+            Nick Mason (Pink Floyd);*Keith Moon (The Who);Roger Taylor (Queen);
+            Dave Grohl (Nirvana)</item>
+        <item>¿Cuál de estas canciones es considerada la primera de l ahistoria del Rock and Roll?;*Maybelline (Chuck Berry);
+            That is Alright Mama (Elvis Presley);
+            Rock Around The Clock (Bill Haley);Bo Didley (Bo Didley)</item>
+    </array>
 </resources>
